@@ -190,3 +190,42 @@ a {
     mix-blend-mode: lighten;
     opacity: 0.9;
 }
+#projects {
+    padding: 60px 9%;
+    background: rgb(35, 30, 65);
+    color: rgb(230, 230, 250);
+}
+
+#projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#projects h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background: rgb(25, 20, 45);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.project-card h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: rgb(255, 182, 193);
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.project-card p strong {
+    color: rgb(255, 105, 180);
+}
