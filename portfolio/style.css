@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;/*padding/border included in width ..*/
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
@@ -22,11 +22,12 @@ a {
     left: 0;
     top: 0;
     width: 100%;
-    padding: 25px 9%;
-    display: flex;
+    padding: 25px 9%;/*top bottom - left right*/
+    display: flex; /*aligné horizontalement */
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 100;/*ordre d'affichage : Plus haut */
+    background:rgb(25, 20, 45) ;
 }
 
 .navbar .logo {
@@ -74,12 +75,14 @@ a {
 
 .home-info h2 span {
     display: inline-block;
-    color: transparent;
-    -webkit-text-stroke: .7px rgb(255, 105, 180);
+    color: transparent; /*Rend le texte invisible (mais son contour peut être visible)*/
+    -webkit-text-stroke: .7px rgb(255, 105, 180);/*couleur du contour , Cette propriété est spécifique aux navigateurs WebKit (Chrome, Safari). */
     animation: display-text 6s linear infinite;
-    animation-delay: calc(-4s * var(--i));
+    animation-delay: calc(-4s * var(--i));/*chaque mot s'affiche à un moment différent.*/
 }
 
+/*0s → 1.5s (0% - 25%)	  ✅ Texte visible
+  1.5s → 6s (25% - 100%)  ❌ Texte caché */
 @keyframes display-text {
     25%,
     100% {
@@ -87,6 +90,8 @@ a {
     }
 }
 
+/*margin: [haut] [gauche et droite] [bas];
+  margin: [haut] [droite] [bas] [gauche];  */
 .home-info p {
     font-size: 16px;
     margin: 10px 0 25px;
@@ -98,6 +103,7 @@ a {
     gap: 15px;
 }
 
+/*box-shadow: [Décalage horizontal] [Décalage vertical] [Flou] [Étalement] [Couleur];*/
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -156,11 +162,12 @@ a {
     position: absolute;
     width: 500px;
     height: 500px;
-    background: conic-gradient(transparent, transparent, transparent, rgb(255, 105, 180));
+    background: conic-gradient(transparent, transparent,
+     transparent, rgb(255, 105, 180));
     border-radius: 50%;
     animation: rotateBorder 6s linear infinite;
 }
-
+/*animation: nomDeLAnimation durée timing-function delay iteration-count direction;*/
 @keyframes rotateBorder {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
