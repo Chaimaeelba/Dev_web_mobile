@@ -30,9 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Form - Confirm</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h2>Registration Form - Review Your Details</h2>
+    <h3>Registration Form - Review Your Details</h3>
     <!-- Display errors -->
     <?php if ($email_error): ?>
         <p style="color:red;"><?php echo $email_error; ?></p>
@@ -68,4 +70,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </body>
 </html>
-
